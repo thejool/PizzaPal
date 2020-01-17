@@ -10,6 +10,18 @@ It helps you check the restaurants opening hours, menu and order pizza right thr
 - Actions on google
 - Node.js
 
+### Setup
+1. Import firebase agent (PizzaPalDialogflow.zip)
+2. Clone git repo
+3. Install node modules inside functions
+
+4. Deploy function to firebase
+$: firebase deploy --only functions
+
+5. Create firebase firestore database
+6. Create firebase realtime database
+
+
 ### Intents
 - Default fallback intent (dialogflow)
 - Default welcome intent (dialogflow)
@@ -18,19 +30,17 @@ It helps you check the restaurants opening hours, menu and order pizza right thr
 - See Menu (fulfillment)
 - Order (fulfillment)
   - See Menu (fulfillment)
-  - User Signed In (fulfillment)
   - Select Pizza (fulfillment)
   - Select Pizza - yes (fulfillment)
   - Select Pizza - no (dialogflow)
-
-
-### Actions On Google
-- Account linking
 
 
 ### Troubleshooting
 - Missing firebase credentials
 - Missing dialogflow credentials
 - Export google cloud credentials
-- Account linking
-- Fill in all neccessary information to enable transactions API (if you want to use it)
+
+
+
+
+This gives us a very good foundation for building a complete application with a frontend and backend.

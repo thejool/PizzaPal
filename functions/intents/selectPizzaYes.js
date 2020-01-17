@@ -21,9 +21,11 @@ const selectPizzaYes = db => conv => {
     }))
   }
 
-  db.ref('orders/' + order.id).set(order)
-
-  conv.close(`You're order is now being prepared. Grab it in fifteen to twenty minutes. Thank you!`)
+  db.collection('orders').add(order)
+    .then(console.log)
+    .catch(console.log);
+  
+  conv.close(`You're order is now being prepared. Grab it in ten to fifteen minutes. Thank you!`)
 }
 
 module.exports = selectPizzaYes
