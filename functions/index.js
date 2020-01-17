@@ -4,7 +4,6 @@ const functions = require('firebase-functions')
 const admin = require('firebase-admin')
 
 const credentials = require("./credentials");
-const initialData = require("./initialData");
 
 admin.initializeApp({
   credential: admin.credential.cert(credentials.firebase),
@@ -12,20 +11,6 @@ admin.initializeApp({
 });
 
 const db = admin.firestore()
-
-// Create the menu items
-initialData.items.forEach(async item => {
-  let menuRef = db.collection('menu')
-  try {
-    const result = await menuRef.get()
-    if(result.empty) {
-      menuRef.add(item)
-    }
-  }
-  catch(err) {
-    console.log(err)
-  }
-})
 
 const { dialogflow } = require('actions-on-google')
 

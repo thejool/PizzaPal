@@ -1,25 +1,14 @@
 # Pizza Pal
 ## Virtual assistant for ordering pizza
 
-Pizza Pal is your best friend when it comes to pizza.
-It helps you check the restaurants opening hours, menu and order pizza right through your assistant.
+PizzaPal is your best friend when it comes to pizza.
+It helps you check the restaurants opening hours, menu and order pizza right through your virtual assistant.
 
 ### Tech Stack
 - Dialogflow
 - Firebase
 - Actions on google
 - Node.js
-
-### Setup
-1. Import firebase agent (PizzaPalDialogflow.zip)
-2. Clone git repo
-3. Install node modules inside functions
-
-4. Deploy function to firebase
-$: firebase deploy --only functions
-
-5. Create firebase firestore database
-6. Create firebase realtime database
 
 
 ### Intents
@@ -40,7 +29,3 @@ $: firebase deploy --only functions
 - Missing dialogflow credentials
 - Export google cloud credentials
 
-
-
-
-This gives us a very good foundation for building a complete application with a frontend and backend.

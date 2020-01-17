@@ -25,7 +25,7 @@ const selectPizzaYes = db => conv => {
     .then(console.log)
     .catch(console.log);
   
-  conv.close(`You're order is now being prepared. Grab it in ten to fifteen minutes. Thank you!`)
+  conv.close(`Your order is now being prepared. Grab it in ten to fifteen minutes. Thank you!`)
 }
 
 module.exports = selectPizzaYes
