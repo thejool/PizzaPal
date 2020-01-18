@@ -2,7 +2,7 @@
 
 const functions = require('firebase-functions')
 const admin = require('firebase-admin')
-
+const { dialogflow } = require('actions-on-google')
 const credentials = require("./credentials");
 
 admin.initializeApp({
@@ -11,9 +11,6 @@ admin.initializeApp({
 });
 
 const db = admin.firestore()
-
-const { dialogflow } = require('actions-on-google')
-
 const app = dialogflow({ 
   clientId : credentials.dialogflow.clientId,
   debug: true,
