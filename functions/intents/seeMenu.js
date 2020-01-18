@@ -10,7 +10,7 @@ const seeMenu = db => async (conv) => {
   let pizzaResponse = ''
   for (let i = 0; i < firstItems; i++) {
     // Create a textual response for devices without displays
-    pizzaResponse += i === 2 ? 'and ' + pizzas[i].name : pizzas[i].name + ', '
+    pizzaResponse += (i < 2) ? pizzas[i].name + ', ' : 'and ' + pizzas[i].name
   }
 
   conv.ask('We have delicious pizzas like ' + pizzaResponse + ' on our menu. See the full menu on our website.')
