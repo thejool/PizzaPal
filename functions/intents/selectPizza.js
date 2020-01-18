@@ -1,11 +1,6 @@
 const { Suggestions } = require('actions-on-google')
 const queryPizzas = require('../helpers/queryPizzas')
-
-// Replace numbers with words for better looking conversations
-const numberToWord = number => {
-  const words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
-  return words[number]
-}
+const numberToWord = require('../helpers/numberToWord')
 
 const selectPizza = db => async (conv, { QuantityAndPizza }) => {
   const dialogflowPizzas = QuantityAndPizza.map(item => item.pizza)
